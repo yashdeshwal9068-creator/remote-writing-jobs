@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Writing Jobs | Find Work From Home Writing Jobs</title>
+    <meta name="description" content="Curated remote writing jobs. Content writing, copywriting, technical writing positions updated daily.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Monetization CTA -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-pen-fancy"></i>
+                <span>RemoteWritingJobs</span>
+            </div>
+            <div class="nav-buttons">
+                <a href="#post-job" class="btn-post" id="postJobBtn">
+                    <i class="fas fa-bullhorn"></i> Post a Job ($49)
+                </a>
+            </div>
+        </nav>
+        
+        <div class="hero">
+            <h1>Find Remote Writing Jobs</h1>
+            <p>Curated writing opportunities • Work from anywhere • Updated daily</p>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search jobs by title, company, or keywords...">
+            </div>
+        </div>
+    </header>
+
+    <!-- Job Filters -->
+    <section class="filters">
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Jobs</button>
+            <button class="filter-btn" data-filter="content">Content Writing</button>
+            <button class="filter-btn" data-filter="copywriting">Copywriting</button>
+            <button class="filter-btn" data-filter="technical">Technical Writing</button>
+            <button class="filter-btn" data-filter="blogging">Blogging</button>
+        </div>
+    </section>
+
+    <!-- Job Listings -->
+    <section class="job-listings" id="jobListings">
+        <!-- Jobs will be loaded here via JavaScript -->
+    </section>
+
+    <!-- Post Job Modal (Hidden by default) -->
+    <div id="postJobModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2><i class="fas fa-bullhorn"></i> Post a Remote Writing Job</h2>
+            <p class="price-tag">Only $49 for 30 days exposure</p>
+            
+            <form id="jobPostForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label>Company Name *</label>
+                    <input type="text" name="company" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Job Title *</label>
+                    <input type="text" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Job Category *</label>
+                    <select name="category" required>
+                        <option value="content">Content Writing</option>
+                        <option value="copywriting">Copywriting</option>
+                        <option value="technical">Technical Writing</option>
+                        <option value="blogging">Blogging</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Location (Remote) *</label>
+                    <input type="text" name="location" value="Remote" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Salary Range (Optional)</label>
+                    <input type="text" name="salary" placeholder="e.g., $50k - $80k">
+                </div>
+                
+                <div class="form-group">
+                    <label>Job Description *</label>
+                    <textarea name="description" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Application Email/URL *</label>
+                    <input type="url" name="apply_url" placeholder="https://..." required>
+                </div>
+                
+                <!-- PayPal Payment Button -->
+                <div class="payment-section">
+                    <h3>Complete Payment</h3>
+                    <p class="payment-note">After payment, your job will be reviewed and posted within 24 hours.</p>
+                    
+                    <!-- Replace with your PayPal button code -->
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com">
+                        <input type="hidden" name="item_name" value="Job Posting - Remote Writing Jobs">
+                        <input type="hidden" name="amount" value="49.00">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    </form>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Job Posting</button>
+                <p class="form-note">You'll receive a confirmation email once your job is live.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <i class="fas fa-briefcase"></i>
+                <h3>1. Post a Job</h3>
+                <p>Fill out the form and pay $49</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-clock"></i>
+                <h3>2. We Review</h3>
+                <p>Job goes live within 24 hours</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-users"></i>
+                <h3>3. Get Applicants</h3>
+                <p>Reach thousands of writers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 RemoteWritingJobs. Built for remote writers worldwide.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+  </html>
